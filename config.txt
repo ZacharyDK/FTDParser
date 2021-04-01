@@ -1,0 +1,2 @@
+Ticker,InputFolder,OutputFolder,OverrideOutputFolder
+GME,Data,Output,True
