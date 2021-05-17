@@ -68,6 +68,9 @@ def MakeNewDirectory(Directory,override = True):
 
     return FinalDirectoryName
 
+
+
+
 #MAIN
 ticker,inputFolder,outputFolder,override = GetConfigurationSettings()
 outputFolder = MakeNewDirectory(outputFolder,override)
@@ -84,8 +87,9 @@ listOfRelevantTickerLines = []
 fileHeader = ""
 bDoOnce = True
 
+#print(dataFileList)
 for dataFileName in dataFileList:
-    dataFile = open(dataFileName,'r')
+    dataFile = open(dataFileName,'r',encoding='latin1')
     data = dataFile.readlines()
     for line in data:
         lineAsList = line.split('|')
@@ -95,6 +99,7 @@ for dataFileName in dataFileList:
             continue
         else:
             lineReplaced = line.replace('|',',') # want csv file
+            #listOfRelevantTickerLines.append(dataFileName + ',' + lineReplaced.strip())
             listOfRelevantTickerLines.append(lineReplaced.strip())
     dataFile.close()
     if(bDoOnce): #get the header to write to the outfile, assume all input files are formatted the same
