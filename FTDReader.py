@@ -21,8 +21,10 @@ Additionally, I substitute all '|' for ','. Helps with csv making
 
 
 '''
-returns the ticker,inputFolder,and outputFolder
+returns the ticker,inputFolder, outputFolder, and override
 from a given configuration file
+
+override: Whether to override the output folder.
 '''
 def GetConfigurationSettings(configFileName = "config.txt"):
     config = open(configFileName,'r')
