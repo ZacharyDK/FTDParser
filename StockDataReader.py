@@ -58,7 +58,7 @@ def MakeNewDirectory(Directory,override = True):
 
 
 '''
-Input: dataFileName, Ticker, TickerIndex, encoding of files  dataFileList,
+Input:  Ticker, TickerIndex, encoding of files  dataFileList,
 Data files to read {Array of string file name}, 
 encoding = 'latin'
 TickerIndex: After spliting a dataline by |, what index would contain the given ticker info
@@ -67,7 +67,7 @@ Output FileHeader {String}, TickerLines {Array of Strings}
 
  
 '''
-def ReadFilesForTicker(dataFileName,ticker,tickerIndex = 2,dataFileList = []):
+def ReadFilesForTicker(ticker,tickerIndex = 2,dataFileList = []):
     listOfRelevantTickerLines = []
 
     fileHeader = ""

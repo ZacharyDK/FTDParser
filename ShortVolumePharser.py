@@ -30,10 +30,10 @@ if __name__ == "__main__":
 
         fileList = os.listdir()
 
-        for fileName in fileList:
+        
 
-            fileHeader, tickerLines = SDR.ReadFilesForTicker(fileName,ticker,1,fileList)
-            TotalTickerLines.extend(tickerLines)
+        fileHeader, tickerLines = SDR.ReadFilesForTicker(ticker,1,fileList)
+        TotalTickerLines.extend(tickerLines)
        
         os.chdir('../')
 
